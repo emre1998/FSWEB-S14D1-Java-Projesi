@@ -1,3 +1,7 @@
+package models.DeveloperCompany;
+
+import java.util.List;
+
 public class HRManager extends Employee {
     private JuniorDeveloper[] juniorDevelopers;
     private MidDeveloper[] midDevelopers;
@@ -46,5 +50,17 @@ public class HRManager extends Employee {
         System.out.println("No more space for Senior Developers.");
 
 
+    }
+
+    public Iterable<? extends JuniorDeveloper> getJuniorDevelopers() {
+        return List.of(juniorDevelopers);
+    }
+
+    public Iterable<? extends MidDeveloper> getMidDevelopers() {
+        return List.of(midDevelopers);
+    }
+
+    public Iterable<? extends SeniorDeveloper> getSeniorDevelopers() {
+        return List.of(seniorDevelopers);
     }
 }

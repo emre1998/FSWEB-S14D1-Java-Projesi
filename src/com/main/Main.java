@@ -1,3 +1,11 @@
+package com.main;
+
+import models.Cylinder.Circle;
+import models.Cylinder.Cylinder;
+import models.DeveloperCompany.*;
+import models.PoolArea.Cuboid;
+import models.PoolArea.Rectangle;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -25,9 +33,9 @@ public class Main {
         System.out.println("cuboid.volume= " + cuboid.getVolume());
 
         Employee employee = new Employee(1, "John Doe", 50000);
-        System.out.println("Employee ID: " + employee.getId());
-        System.out.println("Employee Name: " + employee.getName());
-        System.out.println("Employee Salary: " + employee.getSalary());
+        System.out.println("com.DeveloperCompany.Employee ID: " + employee.getId());
+        System.out.println("com.DeveloperCompany.Employee Name: " + employee.getName());
+        System.out.println("com.DeveloperCompany.Employee Salary: " + employee.getSalary());
 
         HRManager hrManager = new HRManager(2, "Jane Smith", 60000);
         JuniorDeveloper juniorDeveloper1 = new JuniorDeveloper(3, "Alice", 30000);
@@ -44,7 +52,26 @@ public class Main {
         System.out.println("HR Manager Name: " + hrManager.getName());
         System.out.println("HR Manager Salary: " + hrManager.getSalary());
 
+        System.out.println("\nHR Manager's Junior Developers:");
+        for (JuniorDeveloper juniorDeveloper : hrManager.getJuniorDevelopers()) {
+            if (juniorDeveloper != null) {
+                System.out.println(" - " + juniorDeveloper.getName() + ", Salary: " + juniorDeveloper.getSalary());
+            }
+        }
 
+        System.out.println("\nHR Manager's Mid Developers:");
+        for (MidDeveloper midDeveloper : hrManager.getMidDevelopers()) {
+            if (midDeveloper != null) {
+                System.out.println(" - " + midDeveloper.getName() + ", Salary: " + midDeveloper.getSalary());
+            }
+        }
+
+        System.out.println("\nHR Manager's Senior Developers:");
+        for (SeniorDeveloper seniorDeveloper : hrManager.getSeniorDevelopers()) {
+            if (seniorDeveloper != null) {
+                System.out.println(" - " + seniorDeveloper.getName() + ", Salary: " + seniorDeveloper.getSalary());
+            }
+        }
 
             }
         }

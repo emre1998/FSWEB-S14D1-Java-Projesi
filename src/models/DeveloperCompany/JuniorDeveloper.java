@@ -1,4 +1,6 @@
-public class JuniorDeveloper extends Employee{
+package models.DeveloperCompany;
+
+public class JuniorDeveloper extends Employee {
     public JuniorDeveloper(int id,String name,double salary) {
         super(id,name,salary);
     }
@@ -7,4 +9,5 @@ public class JuniorDeveloper extends Employee{
         System.out.println("Junior Developer " + getName() + " starts to working.");
         setSalary(getSalary() + 1000);
     }
+
 }

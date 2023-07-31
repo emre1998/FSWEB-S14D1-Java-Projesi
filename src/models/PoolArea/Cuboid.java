@@ -1,20 +1,22 @@
-public class Cylinder extends Circle {
-private double height;
+package models.PoolArea;
 
-    public Cylinder(double radius,double height) {
-        super(radius);
+public class Cuboid extends Rectangle {
+private double height;
+    public Cuboid(double width, double length,double height) {
+        super(width, length);
         setHeight(height);
     }
 
     public void setHeight(double height) {
-        if(height < 0) {
-            this.height=0;
+        if(height<0) {
+            this.height = 0;
         }else {
             this.height = height;
         }
     }
+
     public double getHeight() {
-        return  height;
+        return height;
     }
     public double getVolume() {
         return getArea() * height;
